@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hIx-Mv-Qm2">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="AL3-CE-rRj">
+            <objects>
+                <viewController id="AX6-lU-B3M" customClass="ViewController" customModule="Capture_Screen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fB-2m-6Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbL-aQ-NK1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjC-k1-Nd4">
+                                        <rect key="frame" x="354" y="104" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="CNf-mw-v05"/>
+                                            <constraint firstAttribute="height" constant="44" id="lwx-cZ-Kcg"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Flash Off Icon"/>
+                                        <connections>
+                                            <action selector="toggleFlash:" destination="AX6-lU-B3M" eventType="touchUpInside" id="J9O-QY-52o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icV-17-Zoy">
+                                        <rect key="frame" x="354" y="148" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Evc-OT-5hG"/>
+                                            <constraint firstAttribute="width" constant="44" id="qcT-5t-aLe"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Rear Camera Icon"/>
+                                        <connections>
+                                            <action selector="switchCameras:" destination="AX6-lU-B3M" eventType="touchUpInside" id="aVW-ZX-FE8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qjC-k1-Nd4" secondAttribute="trailing" constant="16" id="8lz-8P-nZU"/>
+                                    <constraint firstAttribute="trailing" secondItem="icV-17-Zoy" secondAttribute="trailing" constant="16" id="FTV-Eh-mCv"/>
+                                    <constraint firstItem="icV-17-Zoy" firstAttribute="top" secondItem="qjC-k1-Nd4" secondAttribute="bottom" id="aTf-Va-EIG"/>
+                                    <constraint firstItem="qjC-k1-Nd4" firstAttribute="top" secondItem="N9i-D7-CLt" secondAttribute="top" constant="16" id="eUV-MV-X7N"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="N9i-D7-CLt"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87u-dE-jTD">
+                                <rect key="frame" x="179.5" y="791" width="55" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="6WT-QZ-g6I"/>
+                                    <constraint firstAttribute="height" constant="55" id="uJy-ZX-cz1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="captureImage:" destination="AX6-lU-B3M" eventType="touchUpInside" id="LO3-SP-eXr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E72-M2-bsE" firstAttribute="bottom" secondItem="87u-dE-jTD" secondAttribute="bottom" constant="16" id="FTE-QB-p7m"/>
+                            <constraint firstAttribute="bottom" secondItem="xbL-aQ-NK1" secondAttribute="bottom" id="MBj-rY-AzC"/>
+                            <constraint firstItem="E72-M2-bsE" firstAttribute="trailing" secondItem="xbL-aQ-NK1" secondAttribute="trailing" id="dkF-GN-YHj"/>
+                            <constraint firstItem="xbL-aQ-NK1" firstAttribute="top" secondItem="6fB-2m-6Dg" secondAttribute="top" id="fSn-Yo-LXt"/>
+                            <constraint firstItem="87u-dE-jTD" firstAttribute="centerX" secondItem="E72-M2-bsE" secondAttribute="centerX" id="twX-3N-WUg"/>
+                            <constraint firstItem="xbL-aQ-NK1" firstAttribute="leading" secondItem="E72-M2-bsE" secondAttribute="leading" id="whn-CG-kA1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E72-M2-bsE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yia-qE-DTk"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="captureButton" destination="87u-dE-jTD" id="VgI-5n-J4B"/>
+                        <outlet property="capturePreviewView" destination="xbL-aQ-NK1" id="yLE-PY-r2L"/>
+                        <outlet property="toggleCameraButton" destination="icV-17-Zoy" id="SnM-dB-eH1"/>
+                        <outlet property="toggleFlashButton" destination="qjC-k1-Nd4" id="Hu0-PR-iP7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gkr-5g-JIS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046.376811594203" y="138.61607142857142"/>
+        </scene>
+        <!--PreviewVC-->
+        <scene sceneID="vnN-cq-r9u">
+            <objects>
+                <viewController storyboardIdentifier="PreviewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P8g-nE-Noi" customClass="PreviewVC" customModule="Capture_Screen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIZ-LB-Ri1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-Xn-f50">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="234" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-Ds-Oua">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdt-iu-cAZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="40"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteButtonAction" destination="P8g-nE-Noi" eventType="touchUpInside" id="E0X-r9-wf6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-wj-1Rg">
+                                        <rect key="frame" x="340" y="0.0" width="34" height="40"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButtonAction" destination="P8g-nE-Noi" eventType="touchUpInside" id="XRP-ed-ewD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wgk-i1-3Rr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eQK-Xn-f50" firstAttribute="leading" secondItem="A8Q-Uy-iGb" secondAttribute="leading" id="GRa-Xf-Jee"/>
+                            <constraint firstItem="eQK-Xn-f50" firstAttribute="top" secondItem="A8Q-Uy-iGb" secondAttribute="top" id="LMc-XQ-KIJ"/>
+                            <constraint firstItem="A8Q-Uy-iGb" firstAttribute="trailing" secondItem="eQK-Xn-f50" secondAttribute="trailing" id="Zjb-zY-jYH"/>
+                            <constraint firstItem="A8Q-Uy-iGb" firstAttribute="bottom" secondItem="eQK-Xn-f50" secondAttribute="bottom" id="aV3-fP-O1D"/>
+                            <constraint firstItem="A8Q-Uy-iGb" firstAttribute="bottom" secondItem="xtx-Ds-Oua" secondAttribute="bottom" constant="20" id="eYi-eJ-bqP"/>
+                            <constraint firstItem="xtx-Ds-Oua" firstAttribute="leading" secondItem="A8Q-Uy-iGb" secondAttribute="leading" constant="20" id="oI2-1n-2Ra"/>
+                            <constraint firstItem="A8Q-Uy-iGb" firstAttribute="trailing" secondItem="xtx-Ds-Oua" secondAttribute="trailing" constant="20" id="vfz-8x-JKJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A8Q-Uy-iGb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lfh-Nt-Qm4"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="Jdt-iu-cAZ" id="JZg-LC-U6H"/>
+                        <outlet property="imageView" destination="eQK-Xn-f50" id="Gtj-Oa-oZ5"/>
+                        <outlet property="saveButton" destination="D6g-wj-1Rg" id="4bm-bu-8uZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJQ-GT-hKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jCI-z6-NPN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hIx-Mv-Qm2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HTD-8P-RhZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AX6-lU-B3M" kind="relationship" relationship="rootViewController" id="7j3-wZ-FV4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFc-K9-hlC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Flash Off Icon" width="48" height="48"/>
+        <image name="Rear Camera Icon" width="48" height="48"/>
+    </resources>
+</document>
